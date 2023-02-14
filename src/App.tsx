@@ -29,6 +29,14 @@ function App() {
 
   lostsOfPeople = [{name:'Benson'},{name: 'Oliver'}]
 
+  //unions
+
+  let animals: number | string;
+
+  animals = 78;
+
+  animals =  'Ben';
+
   return (
     <div className="App">
       {name}
