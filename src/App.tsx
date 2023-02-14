@@ -14,10 +14,19 @@ function App() {
   students = ['Benji',8];
 
   //object
-  type Person = {
-    name: string,
-    age?: number //optional
-  }
+  //alias
+    type Person = {
+      name: string,
+      age?: number //optional
+    }
+
+    interface Teacher  {
+      name: string,
+      qualification: any
+    }
+    interface School extends Teacher {
+      category: string
+    }
 
   let person : Person = {
     name:'Benson',
@@ -42,7 +51,12 @@ function App() {
     console.log(animals)
   }
 
-  let printName: (name: string) => void;
+  let printName: (name: string) => void; //returns undefined
+  let printPerson: (name: string) => never; //never returns anything
+  //Declaring unknown types
+  let personName: unknown; // use instead of 'any'
+
+  
 
   return (
     <div className="App">
