@@ -20,6 +20,12 @@ function App() {
       age?: number //optional
     }
 
+    //How to extend a type
+    type Character = Person & {
+      hobby: string
+    }
+
+    
     interface Teacher  {
       name: string,
       qualification: any
