@@ -24,6 +24,10 @@ const SingleTodo = ({todo, todos, setTodos}:Props) => {
         )
     }
 
+    const handleDelete = (id: number) =>{
+        setTodos(todos.filter(todo => todo.id !== id))
+    }
+
   return (
     <form className='flex items-center bg-orange-400 p-5 m-1 gap-2'>
         {
@@ -34,7 +38,7 @@ const SingleTodo = ({todo, todos, setTodos}:Props) => {
             )
         }
         <div className='w-1/6'><AiFillEdit /></div>
-        <div className='w-1/6'><AiFillDelete /></div>
+        <div className='w-1/6' onClick={()=>handleDelete(todo.id)}><AiFillDelete /></div>
         <div className='w-1/6' onClick={()=>handleDone(todo.id)}><MdDone /></div>
 
     </form>
