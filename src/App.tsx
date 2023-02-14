@@ -37,6 +37,13 @@ function App() {
 
   animals =  'Ben';
 
+  //functions
+  function printAnimal(animals: string){
+    console.log(animals)
+  }
+
+  let printName: (name: string) => void;
+
   return (
     <div className="App">
       {name}
